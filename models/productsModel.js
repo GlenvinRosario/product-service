@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-const productCollection = require('../config/connection.js')
+const productCollection = require('../config/connection.js');
 
-
+// Define the schema
 const productSchema = new mongoose.Schema({
   id: { type: Number, required: true },
   name: { type: String, required: true },
@@ -10,7 +10,7 @@ const productSchema = new mongoose.Schema({
   image: { type: String, required: true }
 });
 
-
+// Create the model and export it
 const Products = productCollection.model('Product', productSchema);
 
-module.exports = Products ;
+module.exports = Products;
